@@ -1,0 +1,89 @@
+<style>
+.atvri:hover{cursor: pointer; color:red; background-color:#000;}
+.atvri{background-color:#0a1f7e; color:#fff; padding: 5px 10px 5px 10px;
+  margin: 2px; border-radius: 15px;
+}
+.tvri{margin-bottom: 15px;}
+</style>
+<div>
+<center>
+<div class="tvri">
+<a onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRINASIONAL)/Stream(04)/index.m3u8","TVRI Nasonal");' class="atvri">Nasional </a>
+ <a onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRIJABARBANDUNG)/index.m3u8","TVRI Jawa Barat");' class="atvri">Jawa Barat </a>
+ <a onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRIJATENGSEMARANG)/index.m3u8","TVRI Jawa Tengah");' class="atvri">Semarang </a>
+ <a onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRIJATIMSURABAYA)/index.m3u8","TVRI Jawa Timur");' class="atvri">Surabaya </a>
+ <a onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRIYOGYAKARTA)/index.m3u8","TVRI Yogyakarta");' class="atvri">Yogyakarta</a>
+</div>
+
+<div class="tvri">
+<a onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRIKALBAR)/index.m3u8","TVRI Kalimantan Barat");' class="atvri">Pontianak</a>
+<a onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRIKALSELBANJARMSN)/index.m3u8","TVRI Kalimantan Selatan");' class="atvri">Banjarmasin</a>
+<a onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRIKALTENG)/index.m3u8","TVRI Kalimantan Tengah");' class="atvri">Palangkaraya</a>
+<a onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRIKALTIMSAMARINDA)/index.m3u8","TVRI Kalimantan Timur");' class="atvri">Samarinda </a>
+
+
+<a class="atvri" onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRIBABEL)/index.m3u8","TVRI Bangka Belitung");'>Bangka</a>
+<a class="atvri" onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRIBENGKULU)/index.m3u8","TVRI Bengkulu")'>Bengkulu</a>
+<a class="atvri" onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRIJAMBI)/index.m3u8","TVRI Jambi");'>Jambi</a>
+<a class="atvri" onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRILAMPUNG)/index.m3u8","TVRI Lampung");'>Lampung</a>
+<a class="atvri" onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRIACEH)/index.m3u8","TVRI Aceh");'>Aceh</a>
+<a class="atvri" onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRISUMBARPADANG)/index.m3u8","TVRI Sumatera Barat");'>Padang</a>
+<a class="atvri" onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRISUMSEL)/index.m3u8","TVRI Sumatera Selatan");'>Sumsel</a>
+<a class="atvri" onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRISUMUTMEDAN)/index.m3u8","TVRI Sumatera Utara");'>Medan</a>
+<a class="atvri" onclick='tvriStream("http\://118.97.50.107/Content/HLS/Live/Channel(TVRIriau)/index.m3u8","TVRI Riau");'>Riau</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<video id="video" controls autoplay width="1200"></video>
+<script>
+    if(Hls.isSupported()) {
+        var video = document.getElementById('video');
+        var hls = new Hls();
+        hls.loadSource('http://118.97.50.107/Content/HLS/Live/Channel(TVRINASIONAL)/Stream(04)/index.m3u8');
+        hls.attachMedia(video);
+        hls.hlsQualitySelector();
+        hls.on(Hls.Events.MANIFEST_PARSED,function() {
+          video.play();
+        });
+  hls.hlsQualitySelector({
+       displayCurrentQuality: true,
+    });
+
+    }
+    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = 'http://118.97.50.107/Content/HLS/Live/Channel(TVRINASIONAL)/Stream(04)/index.m3u8';
+        video.addEventListener('canplay',function() {
+        video.play();
+        });
+    }
+ 
+    console.log(document.getElementById("ch-name").innerHTML);
+
+</script>
+
+<script>
+function tvriStream(urlStream, jdl) {
+    if(Hls.isSupported()) {
+        var video = document.getElementById('video');
+        video.setAttribute("width", "1200");
+        var hls = new Hls();
+        hls.loadSource(urlStream);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED,function() {
+          video.play();
+        });
+    }
+    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = urlStream;
+        video.addEventListener('canplay',function() {
+        video.play();
+        });
+    }
+    document.getElementById("ch-name").innerHTML = jdl;
+    console.log(document.getElementById("ch-name").innerHTML = jdl);
+
+}      
+</script>
+</video>
+</center>
+</div>

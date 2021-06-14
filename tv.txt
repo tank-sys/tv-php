@@ -1,0 +1,74 @@
+#Trans TV
+*./gambar/transtv.jpg
+*https://20.detik.com/watch/livestreaming-transtv?smartautoplay=false
+*langsung
+
+#Trans 7
+*./gambar/trans7.jpg
+*https://20.detik.com/watch/livestreaming-trans7?smartautoplay=false
+*langsung
+
+#TVRI
+*./gambar/tvri.jpg
+*./gambar/tvri.html
+*langsung
+
+#CNN Tv
+*./gambar/cnn.png
+*https://www.cnnindonesia.com/tv/embed?ref=transmedia&smartautoplay=false
+*langsung
+
+#CNBC Tv
+*./gambar/cnbc.png
+*https://www.cnbcindonesia.com/embed/tv?ref=transmedia&smartautoplay=false
+*langsung
+
+#Nickelodeon Indonesia Tv
+*./gambar/nickelodeon.jpg
+*https://www.youtube.com/embed/1qbmNFqheG4
+*langsung
+
+#Kompas Tv Yotube
+*./gambar/kompas.jpg
+*https://www.youtube.com/embed/u8CZ49jSsC0
+*langsung
+
+#iNews Yotube
+*./gambar/inews.jpg
+*https://www.youtube.com/embed/gEWtNw3i610
+*langsung
+
+#MNC Tv
+*./gambar/mnctv.jpg
+*https://embed.rctiplus.com/live/mnctv/okezone?smartautoplay=false
+*frame
+
+#Gombal TV
+*./gambar/gtv.jpg
+*https://embed.rctiplus.com/live/gtv/okezone?smartautoplay=false
+*frame
+
+#RCTI
+*./gambar/rcti.jpg
+*https://embed.rctiplus.com/live/rcti/okezone?smartautoplay=false
+*frame
+
+#TV One
+*./gambar/tvone.jpg
+*https://www.youtube.com/embed/yeXkLCFIuCU
+*langsung
+
+#SCTV
+*./gambar/sctv.jpg
+*https://www.vidio.com/live/204-sctv-tv-stream/embed?autoplay=true&player_only=true&live_chat=false&mute=false
+*frame
+
+#DAAI TV
+*./gambar/dai.png
+*http://www.dokitv.com/indonesia/beritasatu
+*frame
+
+#JAK TV
+*./gambar/jaktv.png
+*https://www.vidio.com/live/5415-jaktv-tv-stream/embed?autoplay=true&player_only=true&live_chat=false&mute=false&
+*frame
